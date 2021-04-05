@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "35811622208",
+    "project_id": "visitor-management-syste-b5770",
+    "storage_bucket": "visitor-management-syste-b5770.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35811622208:android:1c991c02f428f6a6e5cea5",
+        "android_client_info": {
+          "package_name": "com.abhishek.visitor_management_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35811622208-f9kcf3gp9q5skoo5h3gvt8ut95p6rv9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATxgydUK5nod9v82ZSMb4uj7ApLmQqbGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35811622208-f9kcf3gp9q5skoo5h3gvt8ut95p6rv9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
