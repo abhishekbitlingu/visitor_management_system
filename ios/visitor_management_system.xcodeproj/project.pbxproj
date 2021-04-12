@@ -97,6 +97,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0A59734872354A079418433C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* visitor_management_system */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +145,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				024AA14A02B6ECBF903DCC48 /* Pods */,
+				0A59734872354A079418433C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";

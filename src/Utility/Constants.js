@@ -1,4 +1,12 @@
-const Strings = {};
+const Strings = {
+  login_form_initial_value_email: 'abhishek.bitlingu@gmail.com',
+  login_form_initial_value_password: 'asdfgf',
+  login_form_error_min_characters: 'Some error',
+  login_form_place_holder_email: 'Some PlaceHolder',
+  login_form_place_holder_password: 'Some Placeholder',
+  login_form_forgot_password: 'Forgot Password',
+  login_form_login_button: 'Login',
+};
 
 const NavigationRouteNames = {
   StackNavigator: {
