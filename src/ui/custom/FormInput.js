@@ -1,53 +1,70 @@
-import { Input, Item, Label, Text, View } from 'native-base';
-import React, { Component } from 'react';
-import { Colors } from '../../Utility/Constants';
-import { StyleSheet } from 'react-native';
+import {Input, Item, Label, Text, View} from 'native-base';
+import React, {Component} from 'react';
+import {Colors} from '../../Utility/Constants';
+import {StyleSheet} from 'react-native';
 
 export default class FormInput extends Component {
   UNSAFE_componentWillReceiveProps() {
-    this.forceUpdate()
+    this.forceUpdate();
   }
 
   render() {
-    const { hasError, input, error, placeholder, secureTextEntry, margin, maxLength, isMandatory, isActive, icon } = this.props;
+    const {
+      hasError,
+      input,
+      error,
+      placeholder,
+      secureTextEntry,
+      margin,
+      maxLength,
+      isMandatory,
+      isActive,
+      icon,
+    } = this.props;
 
     return (
-      <View style={styles.formInputContainer} >
-        <View style={styles.leftIconContainer} >
-          {icon}
-        </View>
-        <Item floatingLabel
+      <View style={styles.formInputContainer}>
+        <View style={styles.leftIconContainer}>{icon}</View>
+        <Item
+          floatingLabel
           error={hasError}
           style={[
             {
-              margin: margin ? margin : 10
-            }, styles.labelContainer]} >
-          <Label style={styles.label} >
-            <Text style={[
-              {
-                fontWeight: (isActive || input.value.length > 0) ? '500' : null
-              }, styles.placeholder]} >
-              {
-                (placeholder ? placeholder : '')
-              }
+              margin: margin ? margin : 10,
+            },
+            styles.labelContainer,
+          ]}>
+          <Label style={styles.label}>
+            <Text
+              style={[
+                {
+                  fontWeight: isActive || input.value.length > 0 ? '500' : null,
+                },
+                styles.placeholder,
+              ]}>
+              {placeholder ? placeholder : ''}
             </Text>
-            {
-              isMandatory ? <Text style={styles.mandatory}>*</Text> : <Text />
-            }
+            {isMandatory ? <Text style={styles.mandatory}>*</Text> : <Text />}
           </Label>
-          <Input {...input}
+          <Input
+            {...input}
             value={input.value}
             style={styles.input}
             secureTextEntry={secureTextEntry ? secureTextEntry : false}
-            maxLength={maxLength} />
+            maxLength={maxLength}
+          />
         </Item>
-        {
-          (hasError) ? <Text style={[{ bottom: (input.value.length > 0 || isActive) ? 45 : 15}, styles.error]}>
+        {hasError ? (
+          <Text
+            style={[
+              {bottom: input.value.length > 0 || isActive ? 45 : 15},
+              styles.error,
+            ]}>
             {error}
-          </Text> : null
-        }
+          </Text>
+        ) : null}
       </View>
-    )
+    );
   }
 }
 
@@ -80,14 +97,14 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   input: {
-    color: Colors.app_color_blue,
+    color: Colors.app_color_orange,
     fontSize: 20,
     paddingLeft: 1,
   },
   error: {
+    fontSize: 12,
     position: 'absolute',
     right: 25,
     color: 'red',
   },
-
-})
+});

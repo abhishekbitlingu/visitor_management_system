@@ -32,10 +32,16 @@ class Login extends Component {
       <Container>
         <Header transparent style={styles.header}>
           <StatusBar backgroundColor="white" barStyle={'dark-content'} />
-          <Image
-            source={{uri: Platform.OS == 'android' ? 'ic_launcher' : 'AppIcon'}}
-          />
         </Header>
+        <Image
+          style={{
+            height: 100,
+            width: 100,
+            alignSelf: 'center',
+            justifyContent: 'center',
+          }}
+          source={{uri: Platform.OS == 'android' ? 'ic_launcher' : 'AppIcon'}}
+        />
         <LoginForm
           onSubmit={this.validateUser}
           initialValues={{

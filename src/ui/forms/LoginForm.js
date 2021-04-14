@@ -24,7 +24,7 @@ const validate = values => {
   var validationObj = new AppValidations();
   error.email = validationObj.validateEmail(email);
 
-  if (password.length < 10) {
+  if (password.length < 8) {
     error.password = Strings.login_form_error_min_characters;
   }
 
@@ -48,7 +48,7 @@ class LoginForm extends Component {
         style={{
           fontSize: active || input.value.length > 0 ? 25 : 22,
           color:
-            active || input.value.length > 0 ? Colors.app_color_blue : 'grey',
+            active || input.value.length > 0 ? Colors.app_color_orange : 'grey',
           marginTop: active || input.value.length > 0 ? 8 : 17,
         }}
       />
@@ -77,7 +77,7 @@ class LoginForm extends Component {
         style={{
           fontSize: active || input.value.length > 0 ? 25 : 22,
           color:
-            active || input.value.length > 0 ? Colors.app_color_blue : 'grey',
+            active || input.value.length > 0 ? Colors.app_color_orange : 'grey',
           marginTop: active || input.value.length > 0 ? 8 : 17,
         }}
       />
@@ -116,7 +116,7 @@ class LoginForm extends Component {
           disabled={submitting}
           style={[
             {
-              backgroundColor: submitting ? 'grey' : Colors.app_color_blue,
+              backgroundColor: submitting ? 'grey' : Colors.app_color_orange,
             },
             styles.loginButton,
           ]}>
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     marginTop: 16,
-    height: 60,
+    height: 50,
     marginHorizontal: 30,
     alignSelf: 'stretch',
     justifyContent: 'center',
